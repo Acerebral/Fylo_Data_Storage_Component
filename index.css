@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background: url("./images/bg-desktop.svg") no-repeat 0 300px;
+    background-color:hsl(229, 59%, 11%);
+    color: white;   
+}
+section{
+    width: 80%;
+    margin:200px auto;
+}
+section .files, .progress{
+    float:left;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+section .files{
+    height: 200px;
+    background: #303661;
+    width:35%;
+    border-radius: 15px 100px 15px 15px;
+}
+.progress{
+    background:#303661;;
+    width: 55%;
+    margin-left: 40px;
+    height: 150px;
+    margin-top: 45px;
+}
+.files #logo{
+    margin-top: 30px;
+    margin-left: 10%;
+}
+.files #smallIcons{
+    margin-top: 40px;
+    margin-left: 10%;
+}
+.files .icon{
+    width: 90%;
+    height: 20px;
+}
+.files ul li{
+    display: inline-block;
+    padding: 10px;
+    background-color: black;
+    margin-right: 5%;
+    border-radius: 10px;   
+}
+.progress{
+    padding-left:  20px;
+    font-family: helvetica, sans-serif;
+    font-size: 14px;
+}
+.progress #title{
+    padding-top: 35px;
+    font-size: 1.5em;  
+    margin-bottom: 20px;
+}
+.progress progress[value]{
+    -webkit-appearance:none;
+    appearance:none;
+    width: 80%;
+    height: 15px;
+    margin-bottom: 10px;
+}
+.progress progress[value]::-webkit-progress-bar {
+    background-color: black;
+    border-radius: 10px;
+    clear: both;
+}
+.progress progress[value]::-webkit-progress-value{
+    background-image: -webkit-linear-gradient(360deg,white, hsl(335, 100%, 65%));
+    border-radius: 10px;
+}
+.progress #start,.progress #end{
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-top: 5px;
+}
+.progress #start{    	
+    float: left;
+}
+.progress #end{   	
+    float: right;
+    margin-right: 20%;
+}
+.bubble{
+    clear: both;
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    max-width: 150px;
+    padding:15px 30px;
+    color: black;
+    font-size: 20px;
+    top: -200px;
+    left: 65%;
+}
+.bubble:after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 70%;
+    width: 0;
+    height: 0;
+    border:78px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
+}
+#popup #styled{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: cursive;
+}
+/*Mobile*/
+@media(max-width:720px){
+	body{
+		background: url("./images/bg-mobile.svg")  ;
+    }
+    section{
+		width: 100%;
+    }
+    section .files,section .progress{
+		float:none;
+		width: 90%;
+		margin:0;
+		margin:auto;
+		margin-bottom: 20px;
+    }
+    section .progress{
+		height: 200px;
+    }
+    .bubble{
+		position:relative;
+		margin: auto;
+		margin-bottom: 20px;
+		top: -40px;
+        left:0;
+    }
+    .bubble:after{
+    	position: absolute;
+    	content: "";
+    	bottom: 0;
+    	left: 0;
+    	width: 0;
+    	height: 0;
+    	border:none;
+    	border-top-color: transparent;
+    	border-bottom: 0;
+    	border-right: 0;
+    	margin-left: 0;
+    	margin-bottom: 0;
+    }
+}
